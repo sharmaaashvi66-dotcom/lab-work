@@ -1,12 +1,8 @@
-# Display all Armstrong numbers from 1 to N
-
-n = int(input("Enter a positive integer N: "))
+n = int(input("Enter N: "))
 
 if n < 1:
     print("Invalid input")
 else:
-    print("Armstrong numbers:")
-
     num = 1
 
     while num <= n:
@@ -16,28 +12,18 @@ else:
         # Count the digits
         while temp > 0:
             digits += 1
-            temp //= 10
+            temp = temp // 10
 
         temp = num
         total = 0
 
-        # Calculate the sum of each digit raised to digits
+        # Calculate the sum of each digit raised to the number of digits
         while temp > 0:
             digit = temp % 10
-            power = 1
-            i = 0
+            total += digit ** digits
+            temp = temp // 10
 
-            while i < digits:
-                power *= digit
-                i += 1
-
-            total += power
-            temp //= 10
-
-        # Check whether the number is an Armstrong number
         if total == num:
             print(num, end=" ")
 
         num += 1
-
-    print()

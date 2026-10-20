@@ -7,13 +7,12 @@ else:
     octal = ""
 
     while num > 0:
-        remainder = num % 8
-        octal = str(remainder) + octal
+        rem = num % 8
+        octal = str(rem) + octal
         num = num // 8
 
     print("Octal equivalent:", octal)
 
-    if octal == str(oct(n))[2:]:
-        print("Conversion verified")
-    else:
-        print("Conversion incorrect")
+    # Check the answer using the inbuilt oct() function
+    if int(octal) == int(oct(n)[2:]):
+        print("Both results match")

@@ -1,15 +1,18 @@
-# Display consecutive numbers in a triangle
-
-n = int(input("Enter the number of lines: "))
+n = int(input("Enter N: "))
 
 if n <= 0:
     print("Invalid input")
 else:
     num = 1
+    i = 1
 
-    for i in range(1, n + 1):
-        for j in range(i):
+    while i <= n:
+        j = 1
+
+        while j <= i:
             print(num, end=" ")
             num += 1
+            j += 1
 
         print()
+        i += 1

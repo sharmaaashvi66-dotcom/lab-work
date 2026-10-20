@@ -1,5 +1,16 @@
-n= int(input("Enter your number: "))
-for i in range(1,n):
-    for j in range(1,i+1):
-        print("*",end=" ")
-    print()
+n = int(input("Enter N: "))
+
+if n <= 0:
+    print("Invalid input")
+else:
+    i = 1
+
+    while i <= n:
+        j = 1
+
+        while j <= i:
+            print(j, end=" ")
+            j += 1
+
+        print()
+        i += 1

@@ -1,10 +1,15 @@
-# Display square, cube and square root from 1 to 15
+import math
 
 print("N\tN^2\tN^3\tSquare Root")
 
-for n in range(1, 16):
-    square = n ** 2
-    cube = n ** 3
-    square_root = n ** 0.5
+i = 1
 
-    print(f"{n}\t{square}\t{cube}\t{square_root:.4f}")
+while i <= 15:
+    square = i * i
+    cube = i * i * i
+    root = math.sqrt(i)
+
+    print(i, "\t", square, "\t", cube, "\t",
+          format(root, ".4f"))
+
+    i += 1

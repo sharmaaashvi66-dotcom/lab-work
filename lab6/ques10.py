@@ -1,28 +1,45 @@
-# Display a diamond pattern using nested loops
-
-n = int(input("Enter an odd positive integer: "))
+n = int(input("Enter an odd positive number: "))
 
 if n <= 0 or n % 2 == 0:
     print("Invalid input")
 else:
-    mid = n // 2
+    i = 1
+    mid = n // 2 + 1
 
-    # Upper half including the middle row
-    for i in range(mid + 1):
-        for j in range(mid - i):
+    # Upper half of the diamond
+    while i <= mid:
+        spaces = mid - i
+        stars = 2 * i - 1
+
+        j = 1
+        while j <= spaces:
             print(" ", end="")
+            j += 1
 
-        for j in range(2 * i + 1):
+        j = 1
+        while j <= stars:
             print("*", end="")
+            j += 1
 
         print()
+        i += 1
 
-    # Lower half
-    for i in range(mid - 1, -1, -1):
-        for j in range(mid - i):
+    # Lower half of the diamond
+    i = mid - 1
+
+    while i >= 1:
+        spaces = mid - i
+        stars = 2 * i - 1
+
+        j = 1
+        while j <= spaces:
             print(" ", end="")
+            j += 1
 
-        for j in range(2 * i + 1):
+        j = 1
+        while j <= stars:
             print("*", end="")
+            j += 1
 
         print()
+        i -= 1

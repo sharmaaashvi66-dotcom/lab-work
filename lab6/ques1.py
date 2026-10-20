@@ -1,16 +1,20 @@
-# Display the addition table from 1 to 9
-
 print("          Addition Table")
-print("   ", end="")
 
+print("    ", end="")
 for i in range(1, 10):
     print(i, end="  ")
-print()
 
+print()
 print("---------------------------------------")
 
-for i in range(1, 10):
-    print(i, "|", end=" ")
-    for j in range(1, 10):
+i = 1
+while i <= 9:
+    print(i, "|", end="  ")
+
+    j = 1
+    while j <= 9:
         print(i + j, end="  ")
+        j += 1
+
     print()
+    i += 1

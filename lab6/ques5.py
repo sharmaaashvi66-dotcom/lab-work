@@ -1,29 +1,31 @@
 n = int(input("Enter number of students: "))
 
 if n < 2 or n > 100:
-    print("Invalid number of students")
+    print("Invalid input")
 else:
-    winning = 0
-    runner_up = 0
-    valid = True
+    first = int(input("Enter distance: "))
+    second = None
 
-    for i in range(n):
-        distance = int(input())
+    largest = first
+    runner_up = None
 
-        if distance <= 0:
-            print("Invalid distance")
-            valid = False
-            break
+    i = 1
 
-        if distance > winning:
-            runner_up = winning
-            winning = distance
-        elif distance < winning and distance > runner_up:
-            runner_up = distance
+    while i < n:
+        distance = int(input("Enter distance: "))
 
-    if valid:
-        if runner_up == 0:
-            print("At least two different distances are required")
-        else:
-            print(winning)
-            print(runner_up)
+        if distance > largest:
+            runner_up = largest
+            largest = distance
+
+        elif distance < largest:
+            if runner_up is None or distance > runner_up:
+                runner_up = distance
+
+        i += 1
+
+    if runner_up is None:
+        print("No runner-up distance")
+    else:
+        print(largest)
+        print(runner_up)

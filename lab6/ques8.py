@@ -1,17 +1,16 @@
-# Display repeated-number pattern using nested loops
-
-n = int(input("Enter the number of lines: "))
+n = int(input("Enter N: "))
 
 if n <= 0:
     print("Invalid input")
 else:
-    for i in range(1, n + 1):
-        # Print spaces for the triangle shape
-        for j in range(n - i):
-            print(" ", end="")
+    i = 1
 
-        # Print the current number i times
-        for j in range(i):
+    while i <= n:
+        j = 1
+
+        while j <= i:
             print(i, end=" ")
+            j += 1
 
         print()
+        i += 1
