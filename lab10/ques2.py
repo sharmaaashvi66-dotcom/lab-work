@@ -5,6 +5,6 @@ def count_vowels(s):
             count = count + 1
     return count
 
-s = input()
+s = input("enter")
 result = count_vowels(s)
 print("Vowels:", result)

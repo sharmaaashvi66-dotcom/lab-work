@@ -1,23 +1,23 @@
-def get_grade(marks):
-    if marks >= 80:
+def get_grade(m):
+    if m >= 80:
         return "A"
-    elif marks >= 60:
+    elif m >= 60:
         return "B"
-    elif marks >= 40:
+    elif m >= 40:
         return "C"
     else:
         return "F"
-n = int(input())
+n = int(input("enter"))
 grades = {}
 for i in range(n):
     name, marks = input().split()
     marks = int(marks)
-    grade = get_grade(marks)
-    print(name + ":", grade)
-    if grade in grades:
-        grades[grade] = grades[grade] + 1
+    g = get_grade(marks)
+    print(name , ":", grade)
+    if g in grades:
+        grades[g] = grades[g] + 1
     else:
-        grades[grade] = 1
+        grades[g] = 1
 
 print("Grade count:")
 print(grades)

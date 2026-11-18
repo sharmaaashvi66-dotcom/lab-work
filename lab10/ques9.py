@@ -1,9 +1,9 @@
-n = int(input())
+n = int(input("enter"))
 stock = {}
 for i in range(n):
     item, qty = input().split()
     stock[item] = int(qty)
-q = int(input())
+q = int(input("enter"))
 for i in range(q):
     action, item, qty = input().split()
     qty = int(qty)

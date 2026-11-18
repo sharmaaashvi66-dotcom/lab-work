@@ -1,10 +1,10 @@
 names = input().split()
-votes = {}
+vote = {}
 for i in names:
-    if i in votes:
-        votes[i] = votes[i] + 1
+    if i in vote:
+        vote[i] = vote[i] + 1
     else:
-        votes[i] = 1
-for i in votes:
-    print(i + ":", votes[i])
+        vote[i] = 1
+for i in vote:
+    print(i + ":", vote[i])
 print("Winner:", winner)

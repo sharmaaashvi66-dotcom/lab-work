@@ -1,8 +1,8 @@
-def stats(nums):
-    small = min(nums)
-    large = max(nums)
-    avg = sum(nums) / len(nums)
+def stats(n):
+    small = min(n)
+    large = max(n)
+    avg = sum(n) / len(n)
     return (small, large, avg)
-nums = list(map(int, input().split()))
-result = stats(nums)
+n = list(map(int, input().split()))
+result = stats(n)
 print(result)

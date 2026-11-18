@@ -1,6 +1,6 @@
 l=input().split()
 v=int(input("enter"))
-t=tup(l)
+t=tuple(l)
 for i in t:
     i=int(i)
 print(t)

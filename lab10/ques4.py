@@ -1,4 +1,4 @@
-w = input()
+w = input("enter")
 d = {}
 for i in w:
     if i in d:
